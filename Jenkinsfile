@@ -1,6 +1,6 @@
 node{
   def Namespace = "default"
-  def ImageName = "devopsapp/devopsapp"
+  def ImageName = "nikanikabadze/devopsapp"
   def Creds	= "dockerhub"
   try{
   stage('Checkout'){
