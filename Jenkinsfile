@@ -1,5 +1,5 @@
 node{
-  def Namespace = "default"
+  def Namespace = "development"
   def ImageName = "nikanikabadze/devopsapp"
   def Creds	= "dockerhub"
   try{
