@@ -26,7 +26,7 @@ node{
     }
     stage('Deploy on K8s'){
 //this shit should be fixed
-     sh "ansible-playbook  /var/lib/jenkins/workspace/POC/ansible/devopsapp-deploy/deploy.yml  --user=jenkins --extra-vars ImageName=${ImageName} --extra-vars imageTag=${imageTag} --extra-vars Namespace=${Namespace}"
+     sh "ansible-playbook  /var/lib/jenkins/workspace/POC/ansible/devopsapp-deploy/deploy.yml -vvv --user=jenkins --extra-vars ImageName=${ImageName} --extra-vars imageTag=${imageTag} --extra-vars Namespace=${Namespace}"
     }
      } catch (err) {
       currentBuild.result = 'FAILURE'
