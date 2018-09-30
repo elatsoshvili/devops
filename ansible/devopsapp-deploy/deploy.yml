@@ -13,10 +13,10 @@
       ignore_errors: yes
     - name: Deploy devopsApp
       command: "helm install --name=devops-{{ Namespace }}  --namespace={{ Namespace }} /var/lib/jenkins/workspace/POC/ansible/devopsapp --set image.repository={{ ImageName }} --set image.tag={{ imageTag }} --set namespace={{ Namespace }}"
-      delegate_to: localhost
+      delegate_to: 127.0.0.1
       ignore_errors: yes
     - name: Update devopsApp
       command: "helm upgrade --wait --recreate-pods --namespace={{ Namespace }} --set image.repository={{ ImageName }} --set image.tag={{ imageTag }} --set namespace={{ Namespace }} devops-{{ Namespace }} /var/lib/jenkins/workspace/POC/ansible/devopsapp"
-      delegate_to: localhost
+      delegate_to: 127.0.0.1
       ignore_errors: yes
 
