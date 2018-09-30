@@ -18,5 +18,5 @@
     - name: Update devopsApp
       command: "sudo /usr/local/bin/helm upgrade --debug --wait --recreate-pods --namespace={{ Namespace }} --set image.repository={{ ImageName }} --set image.tag={{ imageTag }} --set namespace={{ Namespace }} devops-{{ Namespace }} /var/lib/jenkins/workspace/POC/ansible/devopsapp"
       delegate_to: localhost
-      ignore_errors: no
+      ignore_errors: yes
 
