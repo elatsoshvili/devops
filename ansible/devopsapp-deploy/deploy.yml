@@ -16,7 +16,7 @@
       delegate_to: 127.0.0.1
       ignore_errors: yes
     - name: Update devopsApp
-      command: "helm upgrade --wait --recreate-pods --namespace={{ Namespace }} --set image.repository={{ ImageName }} --set image.tag={{ imageTag }} --set namespace={{ Namespace }} devops-{{ Namespace }} /var/lib/jenkins/workspace/POC/ansible/devopsapp"
+      command: "helm upgrade --debug --wait --recreate-pods --namespace={{ Namespace }} --set image.repository={{ ImageName }} --set image.tag={{ imageTag }} --set namespace={{ Namespace }} devops-{{ Namespace }} /var/lib/jenkins/workspace/POC/ansible/devopsapp"
       delegate_to: 127.0.0.1
       ignore_errors: yes
 
